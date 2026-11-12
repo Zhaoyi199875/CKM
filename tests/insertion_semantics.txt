@@ -1,0 +1,7 @@
+# Duplicate undirected pairs keep their earliest timestamp.
+10 20 5
+20 10 9
+20 30 7
+10 10 1
+30 40 7
+10 30 8
