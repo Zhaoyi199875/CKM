@@ -1,0 +1,8 @@
+build*/
+*.o
+preprocessing/preprocess_dynamic_graph
+preprocessing/preprocess_dynamic_graph_sanitize
+out.*
+processed_*.txt
+data/
+results/
