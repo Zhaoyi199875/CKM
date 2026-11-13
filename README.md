@@ -53,7 +53,10 @@ maximal cliques the batch created and removed to standard output, one per
 line: the batch's timestamp, `new` or `del`, and the clique's vertices. A
 vertex without edges is a maximal clique of one vertex, and each vertex is in
 the graph from just before the batch of its first edge. `--stats` prints the
-counts and the time of every step to standard error.
+counts and the time in milliseconds of every step. The
+time of CoverSeed is `time-ms` on the line `coverseed:`, that of KernelEnum
+is `time-ms` on the line `subsumed:`, and the total is
+`search-and-maintenance-ms` on the line `timing:`.
 
 | Option | Meaning |
 |---|---|
@@ -65,7 +68,7 @@ counts and the time of every step to standard error.
 | `--change-output=new\|removed\|both` | write the new maximal cliques, the removed ones, or both (default `both`) |
 | `--output=FILE` | write the changes to `FILE` instead of standard output |
 | `--no-output` | write no changes |
-| `--stats` | print counts and times to standard error |
+| `--stats` | print counts and times |
 
 The three update modes are the workloads of the paper:
 
