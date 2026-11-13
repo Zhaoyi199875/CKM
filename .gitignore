@@ -1,9 +1,0 @@
-build*/
-*.o
-preprocessing/preprocess_dynamic_graph
-preprocessing/preprocess_dynamic_graph_sanitize
-preprocessing/tests/processed_input.txt
-out.*
-processed_*.txt
-data/
-results/
