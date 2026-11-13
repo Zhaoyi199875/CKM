@@ -48,15 +48,19 @@ consecutive integers in increasing order.
 ```
 
 inserts the edges of `processed_example_dataset` in batches of 1000 and
-maintains the maximal cliques after every batch. For each batch it writes the
-maximal cliques the batch created and removed to standard output, one per
-line: the batch's timestamp, `new` or `del`, and the clique's vertices. A
-vertex without edges is a maximal clique of one vertex, and each vertex is in
-the graph from just before the batch of its first edge. `--stats` prints the
-counts and the time in milliseconds of every step. The
-time of CoverSeed is `time-ms` on the line `coverseed:`, that of KernelEnum
-is `time-ms` on the line `subsumed:`, and the total is
-`search-and-maintenance-ms` on the line `timing:`.
+maintains the maximal cliques after every batch. For each batch it prints the
+changed maximal cliques, for example
+
+```
+5	new	1 2 3
+5	del	1 2
+```
+
+which says that the batch with timestamp 5 created the maximal clique
+{1, 2, 3} and removed {1, 2}. A vertex without edges is a maximal clique of
+one vertex, and each vertex is in the graph from just before the batch of its
+first edge. `--stats` prints the counts and the time in milliseconds of every
+step.
 
 | Option | Meaning |
 |---|---|
