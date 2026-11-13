@@ -48,8 +48,10 @@ consecutive integers in increasing order.
 ```
 
 inserts the edges of `processed_example_dataset` in batches of 1000 and
-maintains the maximal cliques after every batch. For each batch it prints the
-changed maximal cliques, for example
+maintains the maximal cliques after every batch. It prints the changed
+maximal cliques of every batch and, because of `--stats`, the counts and the
+running time of every step at the end. A changed maximal clique is printed
+as, for example,
 
 ```
 5	new	1 2 3
@@ -59,8 +61,7 @@ changed maximal cliques, for example
 which says that the batch with timestamp 5 created the maximal clique
 {1, 2, 3} and removed {1, 2}. A vertex without edges is a maximal clique of
 one vertex, and each vertex is in the graph from just before the batch of its
-first edge. `--stats` prints the counts and the time in milliseconds of every
-step.
+first edge.
 
 | Option | Meaning |
 |---|---|
